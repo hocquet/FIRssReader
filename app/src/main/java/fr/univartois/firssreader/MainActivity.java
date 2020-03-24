@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -36,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Button settings_btn = (Button) findViewById(R.id.action_settings);
+        settings_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Settings.class));
+            }
+        });
+
         FloatingActionButton fab = findViewById(R.id.load_btn);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
 
         ListView listView = findViewById(R.id.list_view);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -130,15 +130,6 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-
-            Button settings_btn = (Button) findViewById(R.id.action_settings);
-            settings_btn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(new Intent(MainActivity.this, Settings.class));
-                }
-            });
-
             return true;
         }
 
